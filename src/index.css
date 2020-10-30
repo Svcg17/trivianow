@@ -1,0 +1,10 @@
+@import '~antd/dist/antd.css';
+
+:root {
+  --font-family-title: 'Staatliches', cursive;
+  --font-family: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
