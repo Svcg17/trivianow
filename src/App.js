@@ -2,7 +2,7 @@ import { Layout } from 'antd';
 import TriviaHeader from './components/Header/Header';
 import Routes from './components/Routes';
 
-const { Header, Content } = Layout;
+const { Header, Content, Footer } = Layout;
 
 const App = () => {
   return (
@@ -14,6 +14,9 @@ const App = () => {
         <Content>
           <Routes />
         </Content>
+        <Footer>
+          By Sofia Cheung
+        </Footer>
       </Layout>
     </div>
   );
