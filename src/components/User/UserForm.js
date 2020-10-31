@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { Form, Input } from 'antd';
+import { Form, Input, Button, Card } from 'antd';
 import { Cookies } from 'react-cookie';
 import UserContext from '../../context/UserContext';
+import './userForm.css';
 
 /** Display form to get a user name */
 const UserForm = () => {
@@ -21,16 +22,25 @@ const UserForm = () => {
   }
   
   return (
-    <Form
-      name="Username form"
-      initialValues={{ remember: true }}
-      onFinish={onFinish}>
-      <Form.Item
-        label="Your name"
-        name="username"
-        rules={[{ required: true, message: 'Type in your name' }]}
-      ><Input /></Form.Item>
-    </Form>
+    <div className='userForm'>
+      <Card>
+        <Form
+          name='Username form'
+          layout='vertical'
+          initialValues={{ remember: true }}
+          size='large'
+          onFinish={onFinish}>
+          <Form.Item
+            label='Type in your name'
+            name='username'
+            rules={[{ required: true, message: 'Please type your name' }]}
+          ><Input /></Form.Item>
+          <Form.Item>
+            <Button type='primary' htmlType='submit'>Submit</Button>
+          </Form.Item>
+        </Form>
+      </Card>
+    </div>
   )
 }
 

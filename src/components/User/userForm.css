@@ -1,0 +1,7 @@
+/**------ USER FORM -----**/
+
+.userForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
