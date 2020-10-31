@@ -1,0 +1,30 @@
+/**---- TRIVIA ----**/
+
+.trivia {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trivia .ant-radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.trivia .ant-radio-group .ant-radio-wrapper {
+    padding: .5rem;
+}
+
+.trivia h2.ant-typography {
+    font-family: var(--font-family-title);
+}
+
+.incorrect .ant-radio-disabled + span {
+    color: red;
+}
+
+.correct .ant-radio-disabled + span {
+    color: green;
+}
