@@ -1,0 +1,15 @@
+/**/
+
+.homepage {
+    padding: 2rem 0;
+}
+
+.homepage div.ant-col {
+    text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+    .homepage {
+        padding: 3rem;
+    }
+}
