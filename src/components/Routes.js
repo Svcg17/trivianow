@@ -20,7 +20,7 @@ const Routes = () => {
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route exact path='/about' component={About} />
-            <Route exact path='/trivia' component={Trivia} />
+          <Route exact path='/trivia' component={Trivia} />
         </Switch>
       </UserContext.Provider>
     </Router>
