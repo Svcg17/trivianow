@@ -28,3 +28,7 @@
 .correct .ant-radio-disabled + span {
     color: green;
 }
+
+.ant-card-head-title {
+    white-space: normal;
+}
