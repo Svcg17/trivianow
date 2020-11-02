@@ -23,7 +23,7 @@ A web application where you can practice your trivia skills by answering random 
 
 # How To Use
 To run project locally, make sure you have `NodeJs` and `npm` installed in your computer.
-1. Clone the repository by runnning `git clone git@github.com:Svcg17/trivianow.git` 
+1. Clone the repository by running `git clone git@github.com:Svcg17/trivianow.git` 
 2. Change to the `trivianow` directory by running `cd trivianow`
 2. Run `npm install` to install the project's dependencies
 3. Run `npm start` to start the React server on port `3000`
