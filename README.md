@@ -30,7 +30,8 @@ To run project locally, make sure you have `NodeJs` and `npm` installed in your 
 4. You can now view Trivia Now on the browser by going to `http://localhost:3000`
 
 # Improvements
-- Increment number of tests per React component.
+- Learn how to test `useContext` hooks in order to be able to test `Trivia` and `UserForm` components.
+- Increase number of tests per React component.
 - Implement a high score system where the user can see all the scores of each quiz they have completed.
 - Add progress bar to let users know how far along in the quiz they are.
 
