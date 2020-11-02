@@ -24,7 +24,6 @@ const Trivia = () => {
   useEffect(() => {
     const cookies = new Cookies();
     const allOptions = [...questions[currIdx].incorrect, questions[currIdx].correct];
-    
     setUser(cookies.get('user'));
     setOptions(shuffleArray(allOptions));
   }, [currIdx, questions, setUser]);
@@ -42,6 +41,7 @@ const Trivia = () => {
   const toNextQuestion = () => {
     setCurrIdx(currIdx + 1);
     setSubmitted(false);
+    setSelected(false);
   }
 
   /** Handles when user clicks on any of the radio options
@@ -51,6 +51,7 @@ const Trivia = () => {
     setSelected(event.target.value);
   }
 
+  /** Re-shuffle questions array and set index to zero to start the quiz again */
   const restartGame = () => {
     setQuestions(shuffleArray(Questions));
     setCurrIdx(0);
@@ -64,11 +65,12 @@ const Trivia = () => {
     </div>
   )
 
+  /** Displays score after quiz has ended */
   const Conclusion = () => {
     return (
       <>
-        <div>Score: {score}/10</div>
-        <Button onClick={restartGame}>Restart</Button>
+        <h2>{user || user.name }'s score: {score}/10</h2>
+        <Button onClick={restartGame}>Try Again</Button>
       </>
     )
   }
@@ -78,7 +80,7 @@ const Trivia = () => {
       {user && currIdx < 10 ? (
         <>
           <Title level={2}>Welcome, {user || user.name}</Title>
-          <Card title={questions[currIdx] && questions[currIdx].question}>
+          <Card span={24} title={questions[currIdx] && questions[currIdx].question}>
             <Options question={questions[currIdx]}
               options={options}
               submitted={submitted}
