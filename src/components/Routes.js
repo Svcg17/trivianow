@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Router, Switch, Route, useHistory } from 'react-router-dom';
 import Homepage from './Homepage/Homepage';
 import Trivia from './Trivia/Trivia';
+import About from './About/About';
 import UserContext from '../context/UserContext';
 
 /**
@@ -15,13 +16,13 @@ const Routes = () => {
 
   return (
     <Router history={history}>
+      <UserContext.Provider value={{ user, setUser }}>
         <Switch>
           <Route exact path='/' component={Homepage} />
-          <Route exact path='/about' />
-          <UserContext.Provider value={{ user, setUser }}>
+          <Route exact path='/about' component={About} />
             <Route exact path='/trivia' component={Trivia} />
-          </UserContext.Provider>
         </Switch>
+      </UserContext.Provider>
     </Router>
   )
 }
